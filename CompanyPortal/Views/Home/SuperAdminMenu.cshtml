@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewBag.Title = "SuperAdminMenu";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 style="text-align: center">Super Admin Menu</h2>
+<br />
+
+<div class=" col-xs-12">
+<ul class="list-group">
+
+    <li class="list-group-item">@Html.ActionLink("Global", "Index", "GlobalAdmins", null, new { @class = "btn btn-primary btn-lg btn-block" })</li>
+
+</ul>
+</div>
+<div class=" col-xs-12">
+    <ul class="list-group">
+
+        <li class="list-group-item">@Html.ActionLink("Finance", "Index", "FinanceAdmins", null, new { @class = "btn btn-primary btn-lg btn-block" })</li>
+
+    </ul>
+</div>
+<div class=" col-xs-12">
+    <ul class="list-group">
+
+        <li class="list-group-item">@Html.ActionLink("Sales", "Index", "SalesAdmins", null, new { @class = "btn btn-primary btn-lg btn-block" })</li>
+
+    </ul>
+</div>
+<div class=" col-xs-12">
+    <ul class="list-group">
+
+        <li class="list-group-item">@Html.ActionLink("HR", "Index", "HrAdmins", null, new { @class = "btn btn-primary btn-lg btn-block" })</li>
+
+    </ul>
+</div>
+<div class=" col-xs-12">
+    <ul class="list-group">
+
+        <li class="list-group-item">@Html.ActionLink("Engineering", "Index", "EngineeringAdmins", null, new { @class = "btn btn-primary btn-lg btn-block" })</li>
+
+    </ul>
+</div>
+

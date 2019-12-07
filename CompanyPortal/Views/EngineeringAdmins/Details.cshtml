@@ -1,0 +1,35 @@
+﻿@model CompanyPortal.Models.EngineeringAdmin
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+  <h2>Engineering Admin Link Details</h2>
+
+<div>
+    <h4>EngineeringAdmin</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.LinkFunction)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LinkFunction)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LinkAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LinkAddress)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

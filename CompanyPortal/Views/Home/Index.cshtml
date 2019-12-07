@@ -1,0 +1,41 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+    <div class="jumbotron">
+        <h1>BEST COMPANY PORTAL</h1>
+        <p class="lead">Admin tasks made easy</p>
+    
+        @if (User.IsInRole("CanManageLink"))
+        {
+
+            <p> @Html.ActionLink("Continue", "SuperAdminMenu", "Home", null, new { @class = "btn btn-success btn-lg" })</p>
+        }
+        else if (User.IsInRole("CanViewGlobalEngLink"))
+        {
+
+            <p> @Html.ActionLink("Continue", "IndexViewOnly", "EngineeringAdmins", null, new { @class = "btn btn-success btn-lg" })</p>
+        }
+        else if (User.IsInRole("CanViewGlobalFinanceLink"))
+        {
+
+            <p> @Html.ActionLink("Continue", "IndexViewOnly", "FinanceAdmins", null, new { @class = "btn btn-success btn-lg" })</p>
+        }
+        else if (User.IsInRole("CanViewGlobalHRLink"))
+        {
+
+            <p> @Html.ActionLink("Continue", "IndexViewOnly", "HrAdmins", null, new { @class = "btn btn-success btn-lg" })</p>
+        }
+        else if (User.IsInRole("CanViewGlobalLink"))
+        {
+
+            <p> @Html.ActionLink("Continue", "IndexViewOnly", "GlobalAdmins", null, new { @class = "btn btn-success btn-lg" })</p>
+        }
+        else if (User.IsInRole("CanViewGlobalSalesLink"))
+        {
+
+            <p> @Html.ActionLink("Continue", "IndexViewOnly", "SalesAdmins", null, new { @class = "btn btn-success btn-lg" })</p>
+        }
+
+    </div>
+

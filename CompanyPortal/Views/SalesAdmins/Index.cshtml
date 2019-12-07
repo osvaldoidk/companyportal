@@ -1,0 +1,46 @@
+﻿@model IEnumerable<CompanyPortal.Models.SalesAdmin>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Sales Admin Link List</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.LinkFunction)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LinkAddress)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.LinkFunction)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LinkAddress)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
+
+</table>
+
+<br />
+<div>
+    @Html.ActionLink("Back to Menu", "SuperAdminMenu", "Home", null, new { @class = "btn btn-primary" })
+</div>

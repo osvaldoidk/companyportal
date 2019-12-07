@@ -1,0 +1,21 @@
+﻿@model IEnumerable<CompanyPortal.Models.GlobalAdmin>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2></h2>
+
+<table class="table" style="text-align:center">
+ 
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            <a href="@item.LinkAddress" class="btn btn-primary btn-lg btn-block">@item.LinkFunction</a>
+        </td>
+    </tr>
+}
+
+</table>
